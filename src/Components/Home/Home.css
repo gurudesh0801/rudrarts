@@ -1,47 +1,72 @@
-/* Main container */
-.container {
+.mainDiv {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  overflow: hidden;
 }
 
-/* Heading styles */
-.heading1 {
-  font-weight: bold;
-  color: white;
-  font-size: 6rem;
-  position: absolute;
-  z-index: 10;
-  text-align: center;
-}
-
-/* Background images */
-.firstImg,
-.secondImg {
+/* Background Video */
+.backVideo {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 120vh; /* Extra height to ensure smooth transition */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
 }
 
-/* First image */
-.firstImg {
-  z-index: 0;
-  background-image: url("../../assets/images/img.jpg");
+/* Brownish Overlay */
+.mainDiv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Brownish color with transparency */
+  z-index: -1;
 }
 
-/* Second image */
-.secondImg {
+/* Text Styling */
+h1 {
+  position: relative;
   z-index: 1;
-  background-image: url("../../assets/images/img4.png");
-  opacity: 0.8; /* Slight opacity for layered effect */
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* Wall Image */
+.wallImg {
+  width: 100%;
+  height: 28vh;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .wallImg {
+    height: 25vh;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .wallImg {
+    height: 20vh;
+  }
 }

@@ -1,22 +1,14 @@
-import React, { useRef } from "react";
-import Home from "./Components/Home/Home";
-import About from "./Components/About/About";
+import React from "react";
 import "./App.css";
+import Home from "./Components/Home/Home";
+import Navbar from "./Components/Navbar/Navbar";
 
 const App = () => {
-  const aboutRef = useRef(null);
-
-  // Function to scroll to the About section smoothly
-  const scrollToAbout = () => {
-    aboutRef.current.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <div className="app-container">
-      <Home onScrollDown={scrollToAbout} />
-      <div ref={aboutRef}>
-        <About />
-      </div>
+      <Navbar />
+      {/* <h1 className="text-center">Jay Shree Ram</h1> */}
+      <Home />
     </div>
   );
 };
