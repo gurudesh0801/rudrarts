@@ -6,15 +6,8 @@
   --bg-color: #f5f1e7; /* Soft Beige - Elegant Background */
 }
 
-body {
-  background: var(--bg-color);
-  margin: 0;
-  padding: 0;
-  font-family: "Raleway", sans-serif;
-}
-
 .navbar {
-  background: rgba(255, 255, 255, 0.9); /* Soft Transparent White */
+  background: #f5efe6; /* Soft Transparent White */
   padding: 20px 40px;
   position: fixed;
   width: 100%;
@@ -37,7 +30,7 @@ body {
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   font-family: "Playfair Display", serif;
   color: var(--primary-color);

@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-container">
         {/* Logo */}
-        <h2 className="logo">Heritage</h2>
+        <h2 className="logo mt-2">Rudra Arts & Handicrafts</h2>
 
         {/* Hamburger Icon */}
         <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
@@ -18,7 +18,7 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Links */}
-        <ul className={`nav-links ${isOpen ? "open" : ""}`}>
+        <ul className={`nav-links ${isOpen ? "open" : ""} mt-3`}>
           <li>
             <Link to="/" onClick={() => setIsOpen(false)}>
               Home
