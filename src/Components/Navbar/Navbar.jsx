@@ -9,7 +9,8 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <h2 className="logo">YourLogo</h2>
+        {/* Logo */}
+        <h2 className="logo">Heritage</h2>
 
         {/* Hamburger Icon */}
         <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
@@ -29,7 +30,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/blog" onClick={() => setIsOpen(false)}>
+            <Link to="/blogs" onClick={() => setIsOpen(false)}>
               Blog
             </Link>
           </li>

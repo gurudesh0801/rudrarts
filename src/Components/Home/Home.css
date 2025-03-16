@@ -32,12 +32,15 @@
 }
 
 /* Text Styling */
-h1 {
-  position: relative;
-  z-index: 1;
-  color: white;
-  font-weight: bold;
-  font-size: 3rem;
+.heading1 {
+  position: absolute;
+  z-index: 20;
+  bottom: 1.7rem;
+  font-size: 4rem;
+  color: rgb(139, 0, 0);
+  font-family: "Charm", cursive;
+  font-weight: 600;
+  font-style: normal;
   text-align: center;
 }
 
