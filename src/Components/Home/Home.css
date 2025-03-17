@@ -54,6 +54,12 @@
   height: 3rem;
   border: none;
 }
+.btn1:hover {
+  background: rgb(97, 5, 5);
+  border: none;
+  color: white;
+  transition: 0.5s;
+}
 
 /* Wall Image */
 .wallImg {

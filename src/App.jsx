@@ -8,6 +8,7 @@ import "./App.css";
 import Blogs from "./Components/Blogs/Blogs";
 import Products from "./Components/Products/Products";
 import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
@@ -25,11 +26,11 @@ const App = () => {
                 <Element name="about">
                   <AboutUs />
                 </Element>
-                <Element name="Blogs">
-                  <Blogs />
-                </Element>
                 <Element name="Products">
                   <Products />
+                </Element>
+                <Element name="Blogs">
+                  <Blogs />
                 </Element>
               </>
             }
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/Products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

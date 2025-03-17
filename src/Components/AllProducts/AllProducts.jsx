@@ -5,8 +5,11 @@ import "./Product.css";
 import p1 from "../../assets/images/p1.jpg";
 import p2 from "../../assets/images/p2.jpg";
 import p3 from "../../assets/images/p3.jpg";
+import p4 from "../../assets/images/p4.jpg";
+import p5 from "../../assets/images/p5.jpg";
+import p6 from "../../assets/images/p6.jpg";
 
-// Categories with multiple products
+// All categories & products
 const productCategories = [
   {
     category: "Maratha Legacy",
@@ -14,34 +17,60 @@ const productCategories = [
       {
         id: 1,
         name: "सह्याद्रीपती राजा शिवछत्रपती",
-        image: p2,
-        price: "₹3,499",
-        description: "A finely crafted Mavala figurine honoring warriors...",
+        image: p1,
+        price: "₹2,499",
+        description: "A handcrafted murti of Chhatrapati Shivaji Maharaj...",
       },
       {
         id: 2,
         name: "गुर्जदार मावळा",
-        image: p3,
-        price: "₹2,499",
-        description: "A handcrafted murti of Chhatrapati Shivaji Maharaj...",
+        image: p2,
+        price: "₹3,499",
+        description: "A finely crafted Mavala figurine honoring warriors...",
       },
     ],
   },
   {
-    category: "Other",
+    category: "Rajput Glory",
     products: [
       {
         id: 3,
         name: "वीर शिरोमणी महाराणा प्रताप जी",
-        image: p1,
+        image: p3,
         price: "₹7,999",
         description: "Maharana Pratap handcrafted artifacts...",
+      },
+      {
+        id: 4,
+        name: "राजपूती कटार",
+        image: p4,
+        price: "₹5,499",
+        description: "A beautifully crafted Rajputi Katar...",
+      },
+    ],
+  },
+  {
+    category: "Spiritual Heritage",
+    products: [
+      {
+        id: 5,
+        name: "श्री गणेश मूर्ति",
+        image: p5,
+        price: "₹3,999",
+        description: "A divine handcrafted idol of Lord Ganesha...",
+      },
+      {
+        id: 6,
+        name: "महाकाल शिवलिंग",
+        image: p6,
+        price: "₹6,999",
+        description: "A sacred Mahakal Shivling, intricately designed...",
       },
     ],
   },
 ];
 
-const Product = () => {
+const AllProducts = () => {
   const navigate = useNavigate();
 
   return (
@@ -50,19 +79,19 @@ const Product = () => {
         {/* Section Title */}
         <Row className="justify-content-center text-center">
           <Col md={8}>
-            <h1 className="heritage-product-title">Timeless Artifacts</h1>
+            <h1 className="heritage-product-title">Explore All Collections</h1>
             <p className="heritage-product-subtitle">
-              Reliving History Through Every Creation
+              Find the finest handcrafted artifacts from history.
             </p>
           </Col>
         </Row>
 
-        {/* Limited Products Display */}
+        {/* Full Product List */}
         {productCategories.map((category, index) => (
           <div key={index} className="category-section mt-5">
             <h2 className="category-title">{category.category}</h2>
             <Row>
-              {category.products.slice(0, 2).map((product) => (
+              {category.products.map((product) => (
                 <Col md={4} key={product.id} className="mb-4">
                   <Card className="heritage-product-card">
                     <Card.Img
@@ -91,21 +120,18 @@ const Product = () => {
                 </Col>
               ))}
             </Row>
-
-            {/* See More Button */}
-            <div className="text-center mt-4">
-              <Button
-                variant="outline-dark"
-                onClick={() => navigate("/products")}
-              >
-                See More
-              </Button>
-            </div>
           </div>
         ))}
+
+        {/* Back to Home Button */}
+        <div className="text-center mt-4">
+          <Button variant="outline-dark" onClick={() => navigate("/")}>
+            Back to Home
+          </Button>
+        </div>
       </Container>
     </div>
   );
 };
 
-export default Product;
+export default AllProducts;
