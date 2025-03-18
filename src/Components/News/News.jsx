@@ -57,7 +57,7 @@ const News = () => {
       <Container className="mt-5">
         <Row className="justify-content-center text-center mt-3">
           <Col md={8}>
-            <h1 className="News-title">Rudra Arts News</h1>
+            <h1 className="News-title">News</h1>
             <p className="News-subtitle">
               Discover the rich heritage behind handcrafted art
             </p>
