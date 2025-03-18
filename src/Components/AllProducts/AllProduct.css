@@ -46,6 +46,7 @@
   background: #fdf8e3;
   border: 2px solid #9a6b3f;
   border-radius: 10px;
+  height: 25rem;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
