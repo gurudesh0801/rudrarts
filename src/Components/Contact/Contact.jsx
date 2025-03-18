@@ -89,10 +89,9 @@ const Contact = () => {
 
               {/* WhatsApp Contact */}
               <div className="whatsapp-contact">
-                <p>
-                  <FaWhatsapp /> Connect on WhatsApp
-                  <a href="https://wa.me/1234567890">Chat Now</a>
-                </p>
+                <a href="https://wa.me/1234567890" className="whatsapp-button">
+                  <FaWhatsapp className="whatsapp-icon" /> Connect on WhatsApp
+                </a>
               </div>
             </div>
           </Col>

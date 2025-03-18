@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Button, Modal } from "react-bootstrap";
-import "./Blogs.css"; // Custom styles
+import "./News.css"; // Custom styles
 import img1 from "../../assets/images/blog1.jpg";
 import img2 from "../../assets/images/blog2.jpg";
 import img3 from "../../assets/images/blog3.jpg";
 
-// Blog Data
-const blogData = [
+// News Data
+const NewsData = [
   {
     id: 1,
     title: "With Vicky Kaushal",
@@ -36,50 +36,50 @@ const blogData = [
   },
 ];
 
-const Blogs = () => {
+const News = () => {
   const [showModal, setShowModal] = useState(false);
-  const [selectedBlog, setSelectedBlog] = useState(null);
+  const [selectedNews, setSelectedNews] = useState(null);
 
   // Handle modal open
-  const handleShow = (blog) => {
-    setSelectedBlog(blog);
+  const handleShow = (News) => {
+    setSelectedNews(News);
     setShowModal(true);
   };
 
   // Handle modal close
   const handleClose = () => {
     setShowModal(false);
-    setSelectedBlog(null);
+    setSelectedNews(null);
   };
 
   return (
-    <div className="blogs-section">
-      <Container className="mt-5 pt-5">
+    <div className="News-section">
+      <Container className="mt-5">
         <Row className="justify-content-center text-center mt-3">
           <Col md={8}>
-            <h1 className="blogs-title">Rudra Arts Blogs</h1>
-            <p className="blogs-subtitle">
+            <h1 className="News-title">Rudra Arts News</h1>
+            <p className="News-subtitle">
               Discover the rich heritage behind handcrafted art
             </p>
           </Col>
         </Row>
 
-        {/* Blog List */}
+        {/* News List */}
         <Row className="mt-5">
-          {blogData.map((blog) => (
-            <Col md={4} key={blog.id} className="mb-4">
-              <Card className="blog-card">
+          {NewsData.map((News) => (
+            <Col md={4} key={News.id} className="mb-4">
+              <Card className="News-card">
                 <Card.Img
                   variant="top"
-                  src={blog.image}
-                  className="blog-image"
+                  src={News.image}
+                  className="News-image"
                 />
                 <Card.Body>
-                  <Card.Title className="blog-title">{blog.title}</Card.Title>
-                  <Card.Text className="blog-shortDesc">
-                    {blog.shortDesc}
+                  <Card.Title className="News-titles">{News.title}</Card.Title>
+                  <Card.Text className="News-shortDesc">
+                    {News.shortDesc}
                   </Card.Text>
-                  <Button variant="dark" onClick={() => handleShow(blog)}>
+                  <Button variant="dark" onClick={() => handleShow(News)}>
                     Read More
                   </Button>
                 </Card.Body>
@@ -91,18 +91,18 @@ const Blogs = () => {
 
       {/* Popup Modal */}
       <Modal show={showModal} onHide={handleClose} centered>
-        {selectedBlog && (
+        {selectedNews && (
           <>
             <Modal.Header closeButton>
-              <Modal.Title>{selectedBlog.title}</Modal.Title>
+              <Modal.Title>{selectedNews.title}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <img
-                src={selectedBlog.image}
-                alt={selectedBlog.title}
+                src={selectedNews.image}
+                alt={selectedNews.title}
                 className="modal-image"
               />
-              <p className="blog-fullDesc mt-3">{selectedBlog.fullDesc}</p>
+              <p className="News-fullDesc mt-3">{selectedNews.fullDesc}</p>
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={handleClose}>
@@ -116,4 +116,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default News;

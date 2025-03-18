@@ -5,7 +5,7 @@ import "./About.css"; // Custom styles for historical design
 const AboutUs = () => {
   return (
     <div className="about-us-section">
-      <Container className="mt-5">
+      <Container className="">
         <Row className="justify-content-center text-center">
           <Col md={8}>
             <h1 className="about-title">Our Legacy</h1>
@@ -71,7 +71,7 @@ const AboutUs = () => {
         </Row>
 
         <Row className="mt-5">
-          <Col md={12} className="text-center">
+          <Col md={12} className="text-center mb-5">
             <h2 className="vision-title">Our Vision</h2>
             <p className="vision-text">
               To create a bridge between history and the future by delivering

@@ -30,8 +30,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/blogs" onClick={() => setIsOpen(false)}>
-              Blog
+            <Link to="/news" onClick={() => setIsOpen(false)}>
+              News
             </Link>
           </li>
           <li>

@@ -9,6 +9,8 @@ import Blogs from "./Components/Blogs/Blogs";
 import Products from "./Components/Products/Products";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
+import AllProducts from "./Components/AllProducts/AllProducts";
+import News from "./Components/News/News";
 
 const App = () => {
   return (
@@ -29,15 +31,16 @@ const App = () => {
                 <Element name="Products">
                   <Products />
                 </Element>
-                <Element name="Blogs">
-                  <Blogs />
+                <Element name="news">
+                  <News />
                 </Element>
               </>
             }
           />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/Blogs" element={<Blogs />} />
-          <Route path="/Products" element={<Products />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/Products" element={<AllProducts />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />

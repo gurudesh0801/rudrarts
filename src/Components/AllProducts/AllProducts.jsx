@@ -1,13 +1,11 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import "./Product.css";
+import "./AllProduct.css";
 import p1 from "../../assets/images/p1.jpg";
 import p2 from "../../assets/images/p2.jpg";
 import p3 from "../../assets/images/p3.jpg";
 import p4 from "../../assets/images/p4.jpg";
-import p5 from "../../assets/images/p5.jpg";
-import p6 from "../../assets/images/p6.jpg";
 
 // All categories & products
 const productCategories = [
@@ -55,14 +53,14 @@ const productCategories = [
       {
         id: 5,
         name: "श्री गणेश मूर्ति",
-        image: p5,
+        image: p4,
         price: "₹3,999",
         description: "A divine handcrafted idol of Lord Ganesha...",
       },
       {
         id: 6,
         name: "महाकाल शिवलिंग",
-        image: p6,
+        image: p4,
         price: "₹6,999",
         description: "A sacred Mahakal Shivling, intricately designed...",
       },

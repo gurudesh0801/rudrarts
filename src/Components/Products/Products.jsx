@@ -5,39 +5,36 @@ import "./Product.css";
 import p1 from "../../assets/images/p1.jpg";
 import p2 from "../../assets/images/p2.jpg";
 import p3 from "../../assets/images/p3.jpg";
+import p4 from "../../assets/images/p4.jpg";
 
-// Categories with multiple products
-const productCategories = [
+const products = [
   {
-    category: "Maratha Legacy",
-    products: [
-      {
-        id: 1,
-        name: "सह्याद्रीपती राजा शिवछत्रपती",
-        image: p2,
-        price: "₹3,499",
-        description: "A finely crafted Mavala figurine honoring warriors...",
-      },
-      {
-        id: 2,
-        name: "गुर्जदार मावळा",
-        image: p3,
-        price: "₹2,499",
-        description: "A handcrafted murti of Chhatrapati Shivaji Maharaj...",
-      },
-    ],
+    id: 1,
+    name: "छत्रपती शिवाजी महाराज",
+    image: p2,
+    price: "₹3,499",
+    description: "A handcrafted murti of Chhatrapati Shivaji Maharaj...",
   },
   {
-    category: "Other",
-    products: [
-      {
-        id: 3,
-        name: "वीर शिरोमणी महाराणा प्रताप जी",
-        image: p1,
-        price: "₹7,999",
-        description: "Maharana Pratap handcrafted artifacts...",
-      },
-    ],
+    id: 2,
+    name: "गुर्जदार मावळा",
+    image: p3,
+    price: "₹2,499",
+    description: "A finely crafted Mavala figurine honoring warriors...",
+  },
+  {
+    id: 3,
+    name: "महाराणा प्रताप जी",
+    image: p1,
+    price: "₹7,999",
+    description: "Maharana Pratap handcrafted artifacts...",
+  },
+  {
+    id: 4,
+    name: "छत्रपती शिवाजी महाराज",
+    image: p4,
+    price: "₹5,499",
+    description: "A handcrafted murti of Chhatrapati Shivaji Maharaj...",
   },
 ];
 
@@ -57,52 +54,41 @@ const Product = () => {
           </Col>
         </Row>
 
-        {/* Limited Products Display */}
-        {productCategories.map((category, index) => (
-          <div key={index} className="category-section mt-5">
-            <h2 className="category-title">{category.category}</h2>
-            <Row>
-              {category.products.slice(0, 2).map((product) => (
-                <Col md={4} key={product.id} className="mb-4">
-                  <Card className="heritage-product-card">
-                    <Card.Img
-                      variant="top"
-                      src={product.image}
-                      className="heritage-product-image"
-                    />
-                    <Card.Body className="text-center">
-                      <Card.Title className="heritage-product-name">
-                        {product.name}
-                      </Card.Title>
-                      <Card.Text className="heritage-product-description">
-                        {product.description}
-                      </Card.Text>
-                      <span className="heritage-product-price">
-                        {product.price}
-                      </span>
-                      <Button
-                        variant="dark"
-                        className="heritage-buy-button mt-3"
-                      >
-                        Buy Now
-                      </Button>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              ))}
-            </Row>
+        {/* Product Cards */}
+        <Row>
+          {products.map((product) => (
+            <Col md={3} sm={6} xs={12} key={product.id} className="mb-4">
+              <Card className="heritage-product-card">
+                <Card.Img
+                  variant="top"
+                  src={product.image}
+                  className="heritage-product-image"
+                />
+                <Card.Body className="text-center">
+                  <Card.Title className="heritage-product-name">
+                    {product.name}
+                  </Card.Title>
+                  <Card.Text className="heritage-product-description">
+                    {product.description}
+                  </Card.Text>
+                  <span className="heritage-product-price">
+                    {product.price}
+                  </span>
+                  <Button variant="dark" className="heritage-buy-button mt-3">
+                    Buy Now
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
 
-            {/* See More Button */}
-            <div className="text-center mt-4">
-              <Button
-                variant="outline-dark"
-                onClick={() => navigate("/products")}
-              >
-                See More
-              </Button>
-            </div>
-          </div>
-        ))}
+        {/* See More Button */}
+        <div className="text-center mt-4">
+          <Button variant="outline-dark" onClick={() => navigate("/products")}>
+            See More
+          </Button>
+        </div>
       </Container>
     </div>
   );

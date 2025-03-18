@@ -86,20 +86,29 @@
 }
 
 /* WhatsApp Contact */
-.whatsapp-contact p {
-  font-size: 1.2rem;
+.whatsapp-contact {
   margin-top: 15px;
-  font-weight: bold;
 }
 
-.whatsapp-contact a {
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
   text-decoration: none;
-  color: #25d366;
+  font-size: 16px;
   font-weight: bold;
+  transition: background 0.3s ease-in-out;
 }
 
-.whatsapp-contact a:hover {
-  color: #128c7e;
+.whatsapp-button:hover {
+  background-color: #1ebc5b; /* Darker green on hover */
+}
+
+.whatsapp-icon {
+  font-size: 20px;
+  margin-right: 8px;
 }
 
 /* Responsive Design */

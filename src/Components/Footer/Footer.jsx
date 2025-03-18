@@ -63,7 +63,7 @@ const Footer = () => {
           <h3 className="footer-title">Contact Us</h3>
           <div className="whatsapp-container">
             <a
-              href="https://wa.me/918888888888"
+              href="https://wa.me/917028996666"
               className="whatsapp-contact"
               target="_blank"
               rel="noopener noreferrer"
