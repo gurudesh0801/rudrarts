@@ -45,11 +45,6 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-
-        {/* Search Icon */}
-        <div className="search-icon">
-          <FiSearch />
-        </div>
       </div>
     </nav>
   );
